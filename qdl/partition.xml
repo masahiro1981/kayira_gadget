@@ -65,11 +65,11 @@
         <partition label="ssd" size_in_kb="ssd-size" type="2C86E742-745E-4FDD-BFD8-B6A7AC638772" bootable="false" readonly="false" filename=""/>
         <partition label="dtbo_a" size_in_kb="dtbo_a-size" type="24d0d418-d31d-4d8d-ac2c-4d4305188450" bootable="false" readonly="false" filename="dtbo.img"/>
         <partition label="dtbo_b" size_in_kb="dtbo_b-size" type="77036CD4-03D5-42BB-8ED1-37E5A88BAA34" bootable="false" readonly="false" filename="dtbo.img"/>
-	<partition label="modemst1" size_in_kb="modenst1-size" type="EBBEADAF-22C9-E33B-8F5D-0E81686A68CB" bootable="false" readonly="false" filename=""/>
+	<partition label="modemst1" size_in_kb="modemst1-size" type="EBBEADAF-22C9-E33B-8F5D-0E81686A68CB" bootable="false" readonly="false" filename=""/>
         <partition label="modemst2" size_in_kb="modemst2-size" type="0A288B1F-22C9-E33B-8F5D-0E81686A68CB" bootable="false" readonly="false" filename=""/>
         <partition label="persist" size_in_kb="persist-size" type="6C95E238-E343-4BA8-B489-8681ED22AD0B" bootable="false" readonly="false" filename="persist.img" sparse="true"/>
         <partition label="misc" size_in_kb="misc-size" type="82ACC91F-357C-4A68-9C8F-689E1B1A23A1" bootable="false" readonly="false" filename="" />
-        <partition label="keystore" size_in_kb="keysotre-size" type="DE7D4029-0F5B-41C8-AE7E-F6C023A02B33" bootable="false" readonly="false" filename="" />
+        <partition label="keystore" size_in_kb="keystore-size" type="DE7D4029-0F5B-41C8-AE7E-F6C023A02B33" bootable="false" readonly="false" filename="" />
         <partition label="devcfg_a" size_in_kb="devcfg_a-size" type="F65D4B16-343D-4E25-AAFC-BE99B6556A6D" bootable="false" readonly="false" filename="devcfg.mbn"/>
         <partition label="devcfg_b" size_in_kb="devcfg_b-size" type="77036CD4-03D5-42BB-8ED1-37E5A88BAA34" bootable="false" readonly="false" filename="devcfg.mbn"/>
 	<partition label="qupfw_a" size_in_kb="qupfw_a-size" type="21d1219f-2ed1-4ab4-930a-41a16ae75f7f" bootable="false" readonly="false" filename="qupv3fw.elf"/>
@@ -77,8 +77,8 @@
 	<partition label="frp" size_in_kb="frp-size" type="91B72D4D-71E0-4CBF-9B8E-236381CFF17A" bootable="false" readonly="false" filename=""/>
 	<partition label="logdump" size_in_kb="logdump-size" type="5AF80809-AABB-4943-9168-CDFC38742598" bootable="false" readonly="false" filename=""/>
         <partition label="sti" size_in_kb="sti-size" type="AA9A5C4C-4F1F-7D3A-014A-22BD33BF7191" bootable="false" readonly="false" filename=""/>
-	<partition label="storsec_a" size_in_kb="storesec_a-size" type="02DB45FE-AD1B-4CB6-AECC-0042C637DEFA" bootable="false" readonly="false" filename="storsec.mbn"/>
-	<partition label="storsec_b" size_in_kb="storesec_b-size" type="77036CD4-03D5-42BB-8ED1-37E5A88BAA34" bootable="false" readonly="false" filename="storsec.mbn"/>
+	<partition label="storsec_a" size_in_kb="storsec_a-size" type="02DB45FE-AD1B-4CB6-AECC-0042C637DEFA" bootable="false" readonly="false" filename="storsec.mbn"/>
+	<partition label="storsec_b" size_in_kb="storsec_b-size" type="77036CD4-03D5-42BB-8ED1-37E5A88BAA34" bootable="false" readonly="false" filename="storsec.mbn"/>
 	<partition label="rawdump" size_in_kb="rawdump-size" type="66C9B323-F7FC-48B6-BF96-6F32E335A428" bootable="false" readonly="false" filename=""/>
 	<partition label="vbmeta_a" size_in_kb="vbmeta_a-size" type="4b7a15d6-322c-42ac-8110-88b7da0c5d77" bootable="false" readonly="true" filename=""/>
 	<partition label="vbmeta_b" size_in_kb="vbmeta_b-size" type="77036CD4-03D5-42BB-8ED1-37E5A88BAA34" bootable="false" readonly="true" filename=""/>

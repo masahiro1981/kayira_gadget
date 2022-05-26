@@ -250,7 +250,7 @@ volumes:
         size: 1024k
         type: 82ACC91F-357C-4A68-9C8F-689E1B1A23A1
       - name: keystore
-        size: 
+        size: 512k
         type: DE7D4029-0F5B-41C8-AE7E-F6C023A02B33
         
       - name: devcfg_a
@@ -264,12 +264,12 @@ volumes:
         content: 
           - image: devcfg.mbne
 
-      - name: qupv3fw_a
+      - name: qupfw_a
         size: 64k
         type: 21d1219f-2ed1-4ab4-930a-41a16ae75f7f
         content:
           - image: qupv3fw.elf
-      - name: qupv3fw_b
+      - name: qupfw_b
         size: 64k
         type: 77036CD4-03D5-42BB-8ED1-37E5A88BAA34
         content:
