@@ -2,7 +2,7 @@ device-tree-origin: kernel
 volumes:
   qcs410:
     schema: gpt
-    bootloader: edk2
+    bootloader: lk
     structure:
       - name: xbl_a
         size: 3548

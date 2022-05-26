@@ -98,3 +98,11 @@ parts:
       - blobs/gpt_main*.bin
       - blobs/patch*.xml
       - blobs/rawprogram*.xml
+
+
+  emmc-build-blobs:
+    plugin: dump
+    source: blobs
+    organize:
+      "*": blobs/
+
