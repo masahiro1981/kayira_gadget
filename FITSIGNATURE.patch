@@ -1,0 +1,13 @@
+diff --git a/BaseTools/Source/C/GenVtf/GenVtf.h b/BaseTools/Source/C/GenVtf/GenVtf.h
+index 37d5f60506..e1a42083a8 100644
+--- a/BaseTools/Source/C/GenVtf/GenVtf.h
++++ b/BaseTools/Source/C/GenVtf/GenVtf.h
+@@ -43,7 +43,7 @@ WITHOUT WARRANTIES OR REPRESENTATIONS OF ANY KIND, EITHER EXPRESS OR IMPLIED.
+ #define   VTF_OUTPUT_FILE1        "VTF1.RAW"
+ #define   VTF_OUTPUT_FILE2        "VTF2.RAW"
+ #define   VTF_SYM_FILE            "Vtf.SYM"
+-#define   FIT_SIGNATURE           "_FIT_   "
++#define   FIT_SIGNATURE           "_FIT_"
+ 
+ //
+ //Fit Type Definition

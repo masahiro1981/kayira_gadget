@@ -1,0 +1,118 @@
+device-tree-origin: kernel
+volumes:
+  qcs410:
+    schema: gpt
+    bootloader: edk2
+    structure:
+      - name: xbl
+        size: 3548k
+        type: DEA0BA2C-CBDD-4805-B4F9-F428251C3E98
+        content: 
+          - image: blobs/xbl.elf
+      - name: xbl_config
+        size: 2048k
+        type: A053AA7F-40B8-4B1C-BA08-2F68AC71A4F4
+        content:
+          - image: xbl_config.elf
+      - name: tz 
+        size: 2048k
+        type: A053AA7F-40B8-4B1C-BA08-2F68AC71A4F4
+        content: 
+          - image: tz.mbn
+      - name: aop
+        size: 512k
+        type: D69E90A5-4CAB-0071-F6DF-AB977F141A7F
+        content:
+          - image: aop.mbn
+      - name: hyp
+        size: 512k
+        type: E1A6A689-0C8D-4CC6-B4E8-55A4320FBD8A
+        content: 
+          - image: hyp.mbn
+      - name: boot
+        size: 65536k
+        type: 20117F86-E985-4357-B9EE-374BC1D8487D
+        content:
+          - image: boot.img
+      - name: system
+        size: 1048576k
+        type: 97D7B011-54DA-4835-B3C4-917AD6E73D74
+        content:
+          - image: system.img
+      - name: keymaster
+        size: 512k
+        type: A11D2A7C-D82A-4C2F-8A01-1805240E6626
+        content:
+          - image: km4.mbn
+          
+      - name: cmnlib
+        size: 512k
+        type: 73471795-AB54-43F9-A847-4F72EA5CBEF5
+        content:
+          - image: cmnlib.mbn
+         
+      - name: cmnlib64
+        size: 512k
+        type: 8EA64893-1267-4A1B-947C-7C362ACAAD2C
+        content: 
+          - image: cmnlib64.mbn
+      - name: modem
+        size: 112640k
+        type: EBD0A0A2-B9E5-4433-87C0-68B6B72699C7
+        content: 
+          - image: NON-HLOS.bin
+      - name: uefisecapp
+        size: 2048k
+        type: BE8A7E08-1B7A-4CAE-993A-D5B7FB55B3C2
+        content:
+          - image: uefi_sec.mbn
+      - name: dspa
+        size: 32768k
+        type: 7EFE5010-2A1A-4A1A-B8BC-990257813512
+        content:
+          - image: dspso.bin
+      - name: abl
+        size: 1024k
+        type: BD6928A1-4CE0-A038-4F3A-1495E3EDDFFB
+        content:
+          - image: abl.elf
+      - name: bluetooth
+        size: 1024k
+        type: 6cb747f1-c2ef-4092-add0-ca39f79c7af4
+        content: 
+          - image: BTFM.bin
+      - name: dtbo
+        size: 8192k
+        type: 6cb747f1-c2ef-4092-add0-ca39f79c7af4
+        content: 
+          - image: dtbo.img
+      - name: persist
+        size: 32768k
+        type: 6C95E238-E343-4BA8-B489-8681ED22AD0B
+        content: 
+          - image: persist.img
+      - name: devcfg
+        size: 128k
+        type: F65D4B16-343D-4E25-AAFC-BE99B6556A6D
+        content: 
+          - image: devcfg.mbne
+      - name: qupv3fw
+        size: 64k
+        type: 21d1219f-2ed1-4ab4-930a-41a16ae75f7f
+        content:
+          - image: qupv3fw.elf
+      - name: storsec
+        size: 128k
+        type: 02DB45FE-AD1B-4CB6-AECC-0042C637DEFA 
+        content:
+          - image: storsec.mbn
+      - name: userdata
+        size: 12582912k
+        type: 1B81E7E6-F50D-419B-A739-2AEEF8DA3335  
+        content:
+          - image: userdata.img
+          
+          
+          
+          
+   
