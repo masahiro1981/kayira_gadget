@@ -18,70 +18,74 @@
         <!--       they will instead be placed side by side at the beginning of the disk -->
         <partition label="xbl_a" size_in_kb="xbl-size" type="DEA0BA2C-CBDD-4805-B4F9-F428251C3E98" bootable="false" readonly="true" filename="xbl.elf"/>
         <partition label="xbl_b" size_in_kb="xbl-size" type="77036CD4-03D5-42BB-8ED1-37E5A88BAA34" bootable="false" readonly="true" filename="xbl.elf"/>
-		<partition label="xbl_config_a" size_in_kb="xbl_config-size" type="5A325AE4-4276-B66D-0ADD-3494DF27706A" bootable="false" readonly="false" filename="xbl_config.elf"/>
-		<partition label="xbl_config_b" size_in_kb="xbl_config-size" type="77036CD4-03D5-42BB-8ED1-37E5A88BAA34" bootable="false" readonly="false" filename="xbl_config.elf"/>
-		<partition label="tz_a" size_in_kb="tz-size" type="A053AA7F-40B8-4B1C-BA08-2F68AC71A4F4" bootable="false" readonly="true" filename="tz.mbn"/>
+	<partition label="xbl_config_a" size_in_kb="xbl_config-size" type="5A325AE4-4276-B66D-0ADD-3494DF27706A" bootable="false" readonly="false" filename="xbl_config.elf"/>
+	<partition label="xbl_config_b" size_in_kb="xbl_config-size" type="77036CD4-03D5-42BB-8ED1-37E5A88BAA34" bootable="false" readonly="false" filename="xbl_config.elf"/>
+	<partition label="tz_a" size_in_kb="tz-size" type="A053AA7F-40B8-4B1C-BA08-2F68AC71A4F4" bootable="false" readonly="true" filename="tz.mbn"/>
         <partition label="tz_b" size_in_kb="tz-size" type="77036CD4-03D5-42BB-8ED1-37E5A88BAA34" bootable="false" readonly="true" filename="tz.mbn"/>
-		<partition label="aop_a" size_in_kb="aop-size" type="D69E90A5-4CAB-0071-F6DF-AB977F141A7F" bootable="false" readonly="true" filename="aop.mbn"/>
+	<partition label="aop_a" size_in_kb="aop-size" type="D69E90A5-4CAB-0071-F6DF-AB977F141A7F" bootable="false" readonly="true" filename="aop.mbn"/>
         <partition label="aop_b" size_in_kb="aop-size" type="77036CD4-03D5-42BB-8ED1-37E5A88BAA34" bootable="false" readonly="false" filename="aop.mbn"/>				
-		<partition label="hyp_a" size_in_kb="hyp-size" type="E1A6A689-0C8D-4CC6-B4E8-55A4320FBD8A" bootable="false" readonly="true" filename="hyp.mbn"/>
+	<partition label="hyp_a" size_in_kb="hyp-size" type="E1A6A689-0C8D-4CC6-B4E8-55A4320FBD8A" bootable="false" readonly="true" filename="hyp.mbn"/>
         <partition label="hyp_b" size_in_kb="hyp-size" type="77036CD4-03D5-42BB-8ED1-37E5A88BAA34" bootable="false" readonly="true" filename="hyp.mbn"/>
-		<partition label="fsg" size_in_kb="fsg-size" type="638FF8E2-22C9-E33B-8F5D-0E81686A68CB" bootable="false" readonly="true" filename=""/>
+	<partition label="fsg" size_in_kb="fsg-size" type="638FF8E2-22C9-E33B-8F5D-0E81686A68CB" bootable="false" readonly="true" filename=""/>
         <partition label="boot_a" size_in_kb="boot-size" type="20117F86-E985-4357-B9EE-374BC1D8487D" bootable="false" readonly="false" filename="boot.img"/>
-		<partition label="boot_b" size_in_kb="boot-size" type="77036CD4-03D5-42BB-8ED1-37E5A88BAA34" bootable="false" readonly="false" filename="boot.img"/>
-		<partition label="system_a" size_in_kb="system-size" type="97D7B011-54DA-4835-B3C4-917AD6E73D74" bootable="false" readonly="true" filename="system.img" sparse="true"/>
+	<partition label="boot_b" size_in_kb="boot-size" type="77036CD4-03D5-42BB-8ED1-37E5A88BAA34" bootable="false" readonly="false" filename="boot.img"/>
+	<partition label="system_a" size_in_kb="system-size" type="97D7B011-54DA-4835-B3C4-917AD6E73D74" bootable="false" readonly="true" filename="system.img" sparse="true"/>
         <partition label="system_b" size_in_kb="system-size" type="77036CD4-03D5-42BB-8ED1-37E5A88BAA34" bootable="false" readonly="true" filename="system.img" sparse="true"/>	
         <partition label="keymaster_a" size_in_kb="keymaster-size" type="A11D2A7C-D82A-4C2F-8A01-1805240E6626" bootable="false" readonly="true" filename="km4.mbn"/>
-		<partition label="keymaster_b" size_in_kb="keymaster-size" type="77036CD4-03D5-42BB-8ED1-37E5A88BAA34" bootable="false" readonly="true" filename="km4.mbn"/>
-		<partition label="cmnlib_a" size_in_kb="cmnlib-size" type="73471795-AB54-43F9-A847-4F72EA5CBEF5" bootable="false" readonly="true" filename="cmnlib.mbn"/>
-		<partition label="cmnlib64_a" size_in_kb="cmnlib64-size" type="8EA64893-1267-4A1B-947C-7C362ACAAD2C" bootable="false" readonly="true" filename="cmnlib64.mbn"/>
+	<partition label="keymaster_b" size_in_kb="keymaster-size" type="77036CD4-03D5-42BB-8ED1-37E5A88BAA34" bootable="false" readonly="true" filename="km4.mbn"/>
+	<partition label="cmnlib_a" size_in_kb="cmnlib-size" type="73471795-AB54-43F9-A847-4F72EA5CBEF5" bootable="false" readonly="true" filename="cmnlib.mbn"/>
+	<partition label="cmnlib64_a" size_in_kb="cmnlib64-size" type="8EA64893-1267-4A1B-947C-7C362ACAAD2C" bootable="false" readonly="true" filename="cmnlib64.mbn"/>
         <partition label="cmnlib_b" size_in_kb="cmnlib-size" type="77036CD4-03D5-42BB-8ED1-37E5A88BAA34" bootable="false" readonly="true" filename="cmnlib.mbn"/>
         <partition label="cmnlib64_b" size_in_kb="cmnlib64-size" type="77036CD4-03D5-42BB-8ED1-37E5A88BAA34" bootable="false" readonly="true" filename="cmnlib64.mbn"/>
         <partition label="modem_a" size_in_kb="modem-size" type="EBD0A0A2-B9E5-4433-87C0-68B6B72699C7" bootable="false" readonly="true" filename="NON-HLOS.bin"/>
-		<partition label="modem_b" size_in_kb="modem-size" type="77036CD4-03D5-42BB-8ED1-37E5A88BAA34" bootable="false" readonly="true" filename="NON-HLOS.bin"/>
-		<partition label="uefisecapp_a" size_in_kb="uefisecapp-size" type="BE8A7E08-1B7A-4CAE-993A-D5B7FB55B3C2" bootable="false" readonly="false" filename="uefi_sec.mbn"/>
-		<partition label="uefisecapp_b" size_in_kb="uefisecapp-size" type="77036CD4-03D5-42BB-8ED1-37E5A88BAA34" bootable="false" readonly="false" filename="uefi_sec.mbn"/> 
+	<partition label="modem_b" size_in_kb="modem-size" type="77036CD4-03D5-42BB-8ED1-37E5A88BAA34" bootable="false" readonly="true" filename="NON-HLOS.bin"/>
+	<partition label="uefisecapp_a" size_in_kb="uefisecapp-size" type="BE8A7E08-1B7A-4CAE-993A-D5B7FB55B3C2" bootable="false" readonly="false" filename="uefi_sec.mbn"/>
+	<partition label="uefisecapp_b" size_in_kb="uefisecapp-size" type="77036CD4-03D5-42BB-8ED1-37E5A88BAA34" bootable="false" readonly="false" filename="uefi_sec.mbn"/> 
 
         <partition label="dsp_a" size_in_kb="dsp-size" type="7EFE5010-2A1A-4A1A-B8BC-990257813512" bootable="false" readonly="true" filename="dspso.bin"/>
-		<partition label="dsp_b" size_in_kb="dsp-size" type="77036CD4-03D5-42BB-8ED1-37E5A88BAA34" bootable="false" readonly="true" filename="dspso.bin"/>
-	    <partition label="abl_a" size_in_kb="abl-size" type="BD6928A1-4CE0-A038-4F3A-1495E3EDDFFB" bootable="false" readonly="true" filename="abl.elf"/>
-		<partition label="abl_b" size_in_kb="abl-size" type="77036CD4-03D5-42BB-8ED1-37E5A88BAA34" bootable="false" readonly="true" filename="abl.elf"/>
-		<partition label="dip" size_in_kb="dip-size" type="4114B077-005D-4E12-AC8C-B493BDA684FB" bootable="false" readonly="true" filename=""/>
+	<partition label="dsp_b" size_in_kb="dsp-size" type="77036CD4-03D5-42BB-8ED1-37E5A88BAA34" bootable="false" readonly="true" filename="dspso.bin"/>
+	<partition label="abl_a" size_in_kb="abl-size" type="BD6928A1-4CE0-A038-4F3A-1495E3EDDFFB" bootable="false" readonly="true" filename="abl.elf"/>
+	<partition label="abl_b" size_in_kb="abl-size" type="77036CD4-03D5-42BB-8ED1-37E5A88BAA34" bootable="false" readonly="true" filename="abl.elf"/>
+	<partition label="dip" size_in_kb="dip-size" type="4114B077-005D-4E12-AC8C-B493BDA684FB" bootable="false" readonly="true" filename=""/>
         <partition label="devinfo" size_in_kb="devinfo-size" type="65ADDCF4-0C5C-4D9A-AC2D-D90B5CBFCD03" bootable="false" readonly="true" filename=""/>
         <partition label="apdp" size_in_kb="apdp-size" type="E6E98DA2-E22A-4D12-AB33-169E7DEAA507" bootable="false" readonly="true" filename=""/>
         <partition label="msadp" size_in_kb="msadp-size" type="ED9E8101-05FA-46B7-82AA-8D58770D200B" bootable="false" readonly="true" filename=""/>
-		<partition label="spunvm" size_in_kb="spunvm-size" type="e42e2b4c-33b0-429b-b1ef-d341c547022c" bootable="false" readonly="false" filename=""/>
+	<partition label="spunvm" size_in_kb="spunvm-size" type="e42e2b4c-33b0-429b-b1ef-d341c547022c" bootable="false" readonly="false" filename=""/>
         <partition label="dpo" size_in_kb="dpo-size" type="11406F35-1173-4869-807B-27DF71802812" bootable="false" readonly="true" filename=""/>
         <partition label="splash" size_in_kb="splash-size" type="AD99F201-DC71-4E30-9630-E19EEF553D1B" bootable="false" readonly="true" filename=""/>
-	    <partition label="limits" size_in_kb="limits-size" type="10A0C19C-516A-5444-5CE3-664C3226A794" bootable="false" readonly="true"/>
-	    <partition label="toolsfv" size_in_kb="toolsfv-size" type="97745ABA-135A-44C3-9ADC-05616173C24C" bootable="false" readonly="true"/>
+	<partition label="limits" size_in_kb="limits-size" type="10A0C19C-516A-5444-5CE3-664C3226A794" bootable="false" readonly="true"/>
+	<partition label="toolsfv" size_in_kb="toolsfv-size" type="97745ABA-135A-44C3-9ADC-05616173C24C" bootable="false" readonly="true"/>
         <partition label="logfs" size_in_kb="logfs-size" type="E4BE69BF-300E-42A1-8A49-A5AD554EE25D" bootable="false" readonly="false" filename=""/>
         <partition label="ddr" size_in_kb="ddr-size" type="20A0C19C-286A-42FA-9CE7-F64C3226A794" bootable="false" readonly="true"/>
         <partition label="secdata" size_in_kb="secdata-size" type="76cfc7ef-039d-4e2c-b81e-4dd8c2cb2a93" bootable="false" readonly="true" filename=""/>
-		<partition label="bluetooth_a" size_in_kb="bluetooth-size" type="6cb747f1-c2ef-4092-add0-ca39f79c7af4" bootable="false" readonly="true" filename="BTFM.bin"/>
-		<partition label="bluetooth_b" size_in_kb="bluetooth-size" type="77036CD4-03D5-42BB-8ED1-37E5A88BAA34" bootable="false" readonly="true" filename="BTFM.bin"/>   
-		<partition label="footer" size_in_kb="footer-size" type="EBD0A0A2-B9E5-4433-87C0-68B6B72699C7" bootable="false" readonly="false" filename=""/>
-		<partition label="fsc" size_in_kb="fsc-size" type="57B90A16-22C9-E33B-8F5D-0E81686A68CB" bootable="false" readonly="false" filename=""/>
+	<partition label="bluetooth_a" size_in_kb="bluetooth-size" type="6cb747f1-c2ef-4092-add0-ca39f79c7af4" bootable="false" readonly="true" filename="BTFM.bin"/>
+	<partition label="bluetooth_b" size_in_kb="bluetooth-size" type="77036CD4-03D5-42BB-8ED1-37E5A88BAA34" bootable="false" readonly="true" filename="BTFM.bin"/>   
+	<partition label="footer" size_in_kb="footer-size" type="EBD0A0A2-B9E5-4433-87C0-68B6B72699C7" bootable="false" readonly="false" filename=""/>
+	<partition label="fsc" size_in_kb="fsc-size" type="57B90A16-22C9-E33B-8F5D-0E81686A68CB" bootable="false" readonly="false" filename=""/>
         <partition label="ssd" size_in_kb="ssd-size" type="2C86E742-745E-4FDD-BFD8-B6A7AC638772" bootable="false" readonly="false" filename=""/>
         <partition label="dtbo_a" size_in_kb="dtbo-size" type="24d0d418-d31d-4d8d-ac2c-4d4305188450" bootable="false" readonly="false" filename="dtbo.img"/>
         <partition label="dtbo_b" size_in_kb="dtbo-size" type="77036CD4-03D5-42BB-8ED1-37E5A88BAA34" bootable="false" readonly="false" filename="dtbo.img"/>
-		<partition label="modemst1" size_in_kb="modenst1-size" type="EBBEADAF-22C9-E33B-8F5D-0E81686A68CB" bootable="false" readonly="false" filename=""/>
+	<partition label="modemst1" size_in_kb="modenst1-size" type="EBBEADAF-22C9-E33B-8F5D-0E81686A68CB" bootable="false" readonly="false" filename=""/>
         <partition label="modemst2" size_in_kb="modemst2-size" type="0A288B1F-22C9-E33B-8F5D-0E81686A68CB" bootable="false" readonly="false" filename=""/>
         <partition label="persist" size_in_kb="persist-size" type="6C95E238-E343-4BA8-B489-8681ED22AD0B" bootable="false" readonly="false" filename="persist.img" sparse="true"/>
         <partition label="misc" size_in_kb="misc-size" type="82ACC91F-357C-4A68-9C8F-689E1B1A23A1" bootable="false" readonly="false" filename="" />
         <partition label="keystore" size_in_kb="keysotre-size" type="DE7D4029-0F5B-41C8-AE7E-F6C023A02B33" bootable="false" readonly="false" filename="" />
         <partition label="devcfg_a" size_in_kb="devcfg-size" type="F65D4B16-343D-4E25-AAFC-BE99B6556A6D" bootable="false" readonly="false" filename="devcfg.mbn"/>
         <partition label="devcfg_b" size_in_kb="devcfg-size" type="77036CD4-03D5-42BB-8ED1-37E5A88BAA34" bootable="false" readonly="false" filename="devcfg.mbn"/>
-		<partition label="qupfw_a" size_in_kb="qupfw-size" type="21d1219f-2ed1-4ab4-930a-41a16ae75f7f" bootable="false" readonly="false" filename="qupv3fw.elf"/>
-		<partition label="qupfw_b" size_in_kb="qupfw-size" type="77036CD4-03D5-42BB-8ED1-37E5A88BAA34" bootable="false" readonly="false" filename="qupv3fw.elf"/>
-		<partition label="frp" size_in_kb="frp-size" type="91B72D4D-71E0-4CBF-9B8E-236381CFF17A" bootable="false" readonly="false" filename=""/>
-		<partition label="logdump" size_in_kb="logdump-size" type="5AF80809-AABB-4943-9168-CDFC38742598" bootable="false" readonly="false" filename=""/>
+	<partition label="qupfw_a" size_in_kb="qupfw-size" type="21d1219f-2ed1-4ab4-930a-41a16ae75f7f" bootable="false" readonly="false" filename="qupv3fw.elf"/>
+	<partition label="qupfw_b" size_in_kb="qupfw-size" type="77036CD4-03D5-42BB-8ED1-37E5A88BAA34" bootable="false" readonly="false" filename="qupv3fw.elf"/>
+	<partition label="frp" size_in_kb="frp-size" type="91B72D4D-71E0-4CBF-9B8E-236381CFF17A" bootable="false" readonly="false" filename=""/>
+	<partition label="logdump" size_in_kb="logdump-size" type="5AF80809-AABB-4943-9168-CDFC38742598" bootable="false" readonly="false" filename=""/>
         <partition label="sti" size_in_kb="sti-size" type="AA9A5C4C-4F1F-7D3A-014A-22BD33BF7191" bootable="false" readonly="false" filename=""/>
-		<partition label="storsec_a" size_in_kb="storesec-size" type="02DB45FE-AD1B-4CB6-AECC-0042C637DEFA" bootable="false" readonly="false" filename="storsec.mbn"/>
-		<partition label="storsec_b" size_in_kb="storesec-size" type="77036CD4-03D5-42BB-8ED1-37E5A88BAA34" bootable="false" readonly="false" filename="storsec.mbn"/>
-		<partition label="rawdump" size_in_kb="rawdump-size" type="66C9B323-F7FC-48B6-BF96-6F32E335A428" bootable="false" readonly="false" filename=""/>
-		<partition label="vbmeta_a" size_in_kb="vbmeta-size" type="4b7a15d6-322c-42ac-8110-88b7da0c5d77" bootable="false" readonly="true" filename=""/>
-		<partition label="vbmeta_b" size_in_kb="vbmeta-size" type="77036CD4-03D5-42BB-8ED1-37E5A88BAA34" bootable="false" readonly="true" filename=""/>
-		<partition label="userdata" size_in_kb="userdata-size" type="1B81E7E6-F50D-419B-A739-2AEEF8DA3335" bootable="false" readonly="false" filename="userdata.img" sparse="true"/>
+	<partition label="storsec_a" size_in_kb="storesec-size" type="02DB45FE-AD1B-4CB6-AECC-0042C637DEFA" bootable="false" readonly="false" filename="storsec.mbn"/>
+	<partition label="storsec_b" size_in_kb="storesec-size" type="77036CD4-03D5-42BB-8ED1-37E5A88BAA34" bootable="false" readonly="false" filename="storsec.mbn"/>
+	<partition label="rawdump" size_in_kb="rawdump-size" type="66C9B323-F7FC-48B6-BF96-6F32E335A428" bootable="false" readonly="false" filename=""/>
+	<partition label="vbmeta_a" size_in_kb="vbmeta-size" type="4b7a15d6-322c-42ac-8110-88b7da0c5d77" bootable="false" readonly="true" filename=""/>
+	<partition label="vbmeta_b" size_in_kb="vbmeta-size" type="77036CD4-03D5-42BB-8ED1-37E5A88BAA34" bootable="false" readonly="true" filename=""/>
+	<partition label="userdata" size_in_kb="userdata-size" type="1B81E7E6-F50D-419B-A739-2AEEF8DA3335" bootable="false" readonly="false" filename="userdata.img" sparse="true"/>
+	<partition label="ubuntu-seed" size_in_kb="ubuntu-seed-size" type="0FC63DAF-8483-4772-8E79-3D69D8477DE4" bootable="false" readonly="false" sparse="true" filename="ubuntu-seed.img"/>
+	<partition label="ubuntu-save" size_in_kb="ubuntu-save-size" type="CA7D7CCB-63ED-4C53-861C-1742536059CC" bootable="false" readonly="false" />
+	<partition label="ubuntu-boot" size_in_kb="ubuntu-boot-size" type="0FC63DAF-8483-4772-8E79-3D69D8477DE4" bootable="false" readonly="false" sparse="true" />
+	<partition label="ubuntu-data" size_in_kb="ubuntu-data-size" type="0FC63DAF-8483-4772-8E79-3D69D8477DE4" bootable="false" readonly="false" sparse="true" />		
     </physical_partition>
 </configuration>
