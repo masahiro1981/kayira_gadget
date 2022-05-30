@@ -127,7 +127,7 @@ volumes:
         size: 262144
         type: E6E98DA2-E22A-4D12-AB33-169E7DEAA507
       - name: msadp
-        size: 262144M
+        size: 262144
         type: ED9E8101-05FA-46B7-82AA-8D58770D200B
       - name: spunvm
         size: 9125888
