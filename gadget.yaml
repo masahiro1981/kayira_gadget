@@ -197,7 +197,7 @@ volumes:
         size: 131072
         type: F65D4B16-343D-4E25-AAFC-BE99B6556A6D
         content: 
-          - image: blobs/devcfg.mbne
+          - image: blobs/devcfg.mbn
       - name: devcfg_b
         size: 131072
         type: 77036CD4-03D5-42BB-8ED1-37E5A88BAA34
@@ -244,7 +244,7 @@ volumes:
         type: 83,0FC63DAF-8483-4772-8E79-3D69D8477DE4
       - name: ubuntu-boot
         filesystem: ext4
-        size: 5MB
+        size: 5M
         type: 83,0FC63DAF-8483-4772-8E79-3D69D8477DE4
         role: system-boot        
       - name: ubuntu-data
