@@ -5,319 +5,319 @@ volumes:
     bootloader: lk
     structure:
       - name: xbl_a
-        size: 3548
+        size: 3608576
         type: DEA0BA2C-CBDD-4805-B4F9-F428251C3E98
         content: 
           - image: blobs/xbl.elf
       - name: xbl_b
-        size: 3548
+        size: 3608576
         type: 77036CD4-03D5-42BB-8ED1-37E5A88BAA34
         content: 
           - image: blobs/xbl.elf
       - name: xbl_config_a
-        size: 2048
+        size: 2097152
         type: A053AA7F-40B8-4B1C-BA08-2F68AC71A4F4
         content:
-          - image: xbl_config.elf
+          - image: blobs/xbl_config.elf
       - name: xbl_config_b
-        size: 2048
+        size: 2097152
         type: 77036CD4-03D5-42BB-8ED1-37E5A88BAA34
         content:
-          - image: xbl_config.elf
+          - image: blobs/xbl_config.elf
       - name: tz_a 
-        size: 2048
+        size: 2097152
         type: A053AA7F-40B8-4B1C-BA08-2F68AC71A4F4
         content: 
-          - image: tz.mbn
+          - image: blobs/tz.mbn
       - name: tz_b 
-        size: 2048
+        size: 2097152
         type: 77036CD4-03D5-42BB-8ED1-37E5A88BAA34
         content: 
-          - image: tz.mbn
+          - image: blobs/tz.mbn
 
       - name: aop_a
-        size: 512
+        size: 522288
         type: D69E90A5-4CAB-0071-F6DF-AB977F141A7F
         content:
-          - image: aop.mbn
+          - image: blobs/aop.mbn
       - name: aop_b
-        size: 512
+        size: 524288
         type: 77036CD4-03D5-42BB-8ED1-37E5A88BAA34
         content:
-          - image: aop.mbn
+          - image: blobs/aop.mbn
       - name: hyp_a
-        size: 512
+        size: 524288
         type: E1A6A689-0C8D-4CC6-B4E8-55A4320FBD8A
         content: 
-          - image: hyp.mbn
+          - image: blobs/hyp.mbn
       - name: hyp_b
-        size: 512
+        size: 524288
         type: 77036CD4-03D5-42BB-8ED1-37E5A88BAA34
         content: 
-          - image: hyp.mbn
+          - image: blobs/hyp.mbn
       - name: fsg
-        size: 2048
+        size: 2097152
         type: 638FF8E2-22C9-E33B-8F5D-0E81686A68CB
  
       - name: boot_a
-        size: 65536
+        size: 67108864
         type: 20117F86-E985-4357-B9EE-374BC1D8487D
         content:
-          - image: boot.img      
+          - image: blobs/boot.img      
  
       - name: boot_b
-        size: 65536
+        size: 67108864
         type: 77036CD4-03D5-42BB-8ED1-37E5A88BAA34
         content:
-          - image: boot.img
+          - image: blobs/boot.img
       - name: system_a
-        size: 1048576
+        size: 1073741824
         type: 97D7B011-54DA-4835-B3C4-917AD6E73D74
         content:
-          - image: system.img
+          - image: blobs/system.img
       - name: system_b
+        size: 1073741824
+        type: 77036CD4-03D5-42BB-8ED1-37E5A88BAA34
+        content:
+          - image: blobs/system.img
+      - name: keymaster_a
+        size: 524288
+        type: A11D2A7C-D82A-4C2F-8A01-1805240E6626
+        content:
+          - image: blobs/km4.mbn
+      - name: keymaster_b
+        size: 524288
+        type: 77036CD4-03D5-42BB-8ED1-37E5A88BAA34
+        content:
+          - image: blobs/km4.mbn
+          
+      - name: cmnlib_a
+        size: 524288
+        type: 73471795-AB54-43F9-A847-4F72EA5CBEF5
+        content:
+          - image: blobs/cmnlib.mbn
+         
+      - name: cmnlib64_a
+        size: 524288
+        type: 8EA64893-1267-4A1B-947C-7C362ACAAD2C
+        content: 
+          - image: blobs/cmnlib64.mbn
+      - name: cmnlib_b
+        size: 524288
+        type: 77036CD4-03D5-42BB-8ED1-37E5A88BAA34
+        content:
+          - image: blobs/cmnlib.mbn
+         
+      - name: cmnlib64_b
+        size: 524288
+        type: 77036CD4-03D5-42BB-8ED1-37E5A88BAA34
+        content: 
+          - image: blobs/cmnlib64.mbn
+      - name: modem_a
+        size: 115343360
+        type: EBD0A0A2-B9E5-4433-87C0-68B6B72699C7
+        content: 
+          - image: blobs/NON-HLOS.bin
+      - name: modem_b
+        size: 115343360
+        type: 77036CD4-03D5-42BB-8ED1-37E5A88BAA34
+        content: 
+          - image: blobs/NON-HLOS.bin
+
+      - name: uefisecapp_a
+        size: 2097152
+        type: BE8A7E08-1B7A-4CAE-993A-D5B7FB55B3C2
+        content:
+          - image: blobs/uefi_sec.mbn
+      - name: uefisecapp_b
+        size: 2097152
+        type: 77036CD4-03D5-42BB-8ED1-37E5A88BAA34
+        content:
+          - image: blobs/uefi_sec.mbn
+          
+      - name: dsp_a
+        size: 33554432
+        type: 7EFE5010-2A1A-4A1A-B8BC-990257813512
+        content:
+          - image: blobs/dspso.bin
+      - name: dsp_b
+        size: 33554432
+        type: 77036CD4-03D5-42BB-8ED1-37E5A88BAA34
+        content:
+          - image: blobs/dspso.bin
+          
+      - name: abl_a
+        size: 1048576
+        type: BD6928A1-4CE0-A038-4F3A-1495E3EDDFFB
+        content:
+          - image: blobs/abl.elf
+      - name: abl_b
         size: 1048576
         type: 77036CD4-03D5-42BB-8ED1-37E5A88BAA34
         content:
-          - image: system.img
-      - name: keymaster_a
-        size: 512
-        type: A11D2A7C-D82A-4C2F-8A01-1805240E6626
-        content:
-          - image: km4.mbn
-      - name: keymaster_b
-        size: 512
-        type: 77036CD4-03D5-42BB-8ED1-37E5A88BAA34
-        content:
-          - image: km4.mbn
-          
-      - name: cmnlib_a
-        size: 512
-        type: 73471795-AB54-43F9-A847-4F72EA5CBEF5
-        content:
-          - image: cmnlib.mbn
-         
-      - name: cmnlib64_a
-        size: 512
-        type: 8EA64893-1267-4A1B-947C-7C362ACAAD2C
-        content: 
-          - image: cmnlib64.mbn
-      - name: cmnlib_b
-        size: 512
-        type: 77036CD4-03D5-42BB-8ED1-37E5A88BAA34
-        content:
-          - image: cmnlib.mbn
-         
-      - name: cmnlib64_b
-        size: 512
-        type: 77036CD4-03D5-42BB-8ED1-37E5A88BAA34
-        content: 
-          - image: cmnlib64.mbn
-      - name: modem_a
-        size: 112640
-        type: EBD0A0A2-B9E5-4433-87C0-68B6B72699C7
-        content: 
-          - image: NON-HLOS.bin
-      - name: modem_b
-        size: 112640
-        type: 77036CD4-03D5-42BB-8ED1-37E5A88BAA34
-        content: 
-          - image: NON-HLOS.bin
-
-      - name: uefisecapp_a
-        size: 2048
-        type: BE8A7E08-1B7A-4CAE-993A-D5B7FB55B3C2
-        content:
-          - image: uefi_sec.mbn
-      - name: uefisecapp_b
-        size: 2048
-        type: 77036CD4-03D5-42BB-8ED1-37E5A88BAA34
-        content:
-          - image: uefi_sec.mbn
-          
-      - name: dsp_a
-        size: 32768
-        type: 7EFE5010-2A1A-4A1A-B8BC-990257813512
-        content:
-          - image: dspso.bin
-      - name: dsp_b
-        size: 32768
-        type: 77036CD4-03D5-42BB-8ED1-37E5A88BAA34
-        content:
-          - image: dspso.bin
-          
-      - name: abl_a
-        size: 1024
-        type: BD6928A1-4CE0-A038-4F3A-1495E3EDDFFB
-        content:
-          - image: abl.elf
-      - name: abl_b
-        size: 1024
-        type: 77036CD4-03D5-42BB-8ED1-37E5A88BAA34
-        content:
-          - image: abl.elf
+          - image: blobs/abl.elf
       - name: dip
-        size: 1024
+        size: 1048576
         type: 4114B077-005D-4E12-AC8C-B493BDA684FB
       - name: devinfo
-        size: 4
+        size: 4096
         type: 65ADDCF4-0C5C-4D9A-AC2D-D90B5CBFCD03
       - name: apdp
-        size: 256
+        size: 262144
         type: E6E98DA2-E22A-4D12-AB33-169E7DEAA507
 
       - name: msadp
-        size: 256
+        size: 262144M
         type: ED9E8101-05FA-46B7-82AA-8D58770D200B
 
       - name: spunvm
-        size: 8192
+        size: 9125888
         type: e42e2b4c-33b0-429b-b1ef-d341c547022c
 
       - name: dpo
-        size: 1
+        size: 1024
         type: 11406F35-1173-4869-807B-27DF71802812
 
       - name: splash
-        size: 33424
+        size: 34226176
         type: AD99F201-DC71-4E30-9630-E19EEF553D1B
 
       - name: limits
-        size: 4
+        size: 4096
         type: 10A0C19C-516A-5444-5CE3-664C3226A794
 
       - name: toolsfv
-        size: 1024
+        size: 1048576
         type: 97745ABA-135A-44C3-9ADC-05616173C24C
 
       - name: logfs
-        size: 8192
+        size: 9125888
         type: E4BE69BF-300E-42A1-8A49-A5AD554EE25D
 
       - name: ddr
-        size: 1024
+        size: 1048576
         type: 20A0C19C-286A-42FA-9CE7-F64C3226A794
 
       - name: secdata
-        size: 25
+        size: 25600
         type: 76cfc7ef-039d-4e2c-b81e-4dd8c2cb2a93
 
 
       - name: bluetooth_a
-        size: 1024
+        size: 1048576
         type: 6cb747f1-c2ef-4092-add0-ca39f79c7af4
         content: 
-          - image: BTFM.bin
+          - image: blobs/BTFM.bin
       - name: bluetooth_b
-        size: 1024
+        size: 1048576
         type: 77036CD4-03D5-42BB-8ED1-37E5A88BAA34
         content: 
-          - image: BTFM.bin
+          - image: blobs/BTFM.bin
       - name: footer
-        size: 32
+        size: 32768
         type: EBD0A0A2-B9E5-4433-87C0-68B6B72699C7
 
       - name: fsc
-        size: 128
+        size: 131072
         type: 57B90A16-22C9-E33B-8F5D-0E81686A68CB
 
       - name: ssd
-        size: 8
+        size: 8192
         type: 2C86E742-745E-4FDD-BFD8-B6A7AC638772
         
       - name: dtbo_a
-        size: 8192
+        size: 9125888
         type: 6cb747f1-c2ef-4092-add0-ca39f79c7af4
         content: 
-          - image: dtbo.img
+          - image: blobs/dtbo.img
       - name: dtbo_b
-        size: 8192
+        size: 9125888
         type: 77036CD4-03D5-42BB-8ED1-37E5A88BAA34
         content: 
-          - image: dtbo.img
+          - image: blobs/dtbo.img
       - name: modemst1
-        size: 2048
+        size: 2097152
         type: EBBEADAF-22C9-E33B-8F5D-0E81686A68CB
       - name: modemst2
-        size: 2048
+        size: 2097152
         type: 0A288B1F-22C9-E33B-8F5D-0E81686A68CB
       - name: persist
-        size: 32768
+        size: 33554432
         type: 6C95E238-E343-4BA8-B489-8681ED22AD0B
         content: 
-          - image: persist.img
+          - image: blobs/persist.img
       - name: misc
-        size: 1024
+        size: 1048576
         type: 82ACC91F-357C-4A68-9C8F-689E1B1A23A1
       - name: keystore
-        size: 512
+        size: 524288
         type: DE7D4029-0F5B-41C8-AE7E-F6C023A02B33
         
       - name: devcfg_a
-        size: 128
+        size: 131072
         type: F65D4B16-343D-4E25-AAFC-BE99B6556A6D
         content: 
-          - image: devcfg.mbne
+          - image: blobs/devcfg.mbne
       - name: devcfg_b
-        size: 128
+        size: 131072
         type: 77036CD4-03D5-42BB-8ED1-37E5A88BAA34
         content: 
-          - image: devcfg.mbne
+          - image: blobs/devcfg.mbne
 
       - name: qupfw_a
-        size: 64
+        size: 65536
         type: 21d1219f-2ed1-4ab4-930a-41a16ae75f7f
         content:
-          - image: qupv3fw.elf
+          - image: blobs/qupv3fw.elf
       - name: qupfw_b
-        size: 64
+        size: 65536
         type: 77036CD4-03D5-42BB-8ED1-37E5A88BAA34
         content:
-          - image: qupv3fw.elf
+          - image: blobs/qupv3fw.elf
       - name: frp
-        size: 512
+        size: 524288
         type: 91B72D4D-71E0-4CBF-9B8E-236381CFF17A
       - name: logdump
-        size: 65536
+        size: 67108864
         type: 5AF80809-AABB-4943-9168-CDFC38742598
       - name: sti
-        size: 2048
+        size: 2097152
         type: AA9A5C4C-4F1F-7D3A-014A-22BD33BF7191
       - name: storsec_a
-        size: 128
+        size: 16777216
         type: 02DB45FE-AD1B-4CB6-AECC-0042C637DEFA 
         content:
-          - image: storsec.mbn
+          - image: blobs/storsec.mbn
       - name: storsec_b
-        size: 128
+        size: 16777216
         type: 77036CD4-03D5-42BB-8ED1-37E5A88BAA34
         content:
-          - image: storsec.mbn
+          - image: blobs/storsec.mbn
       - name: rawdump
-        size: 131072
+        size: 1158217728
         type: 66C9B323-F7FC-48B6-BF96-6F32E335A428
       - name: vbmeta_a
-        size: 64
+        size: 65536
         type: 4b7a15d6-322c-42ac-8110-88b7da0c5d77
       - name: vbmeta_b
-        size: 64
+        size: 65536
         type: 77036CD4-03D5-42BB-8ED1-37E5A88BAA34
       - name: userdata
         size: 12582912
         type: 1B81E7E6-F50D-419B-A739-2AEEF8DA3335  
         content:
-          - image: userdata.img
+          - image: blobs/userdata.img
       - name: ubuntu-seed
         size: 500M
         type: 83,0FC63DAF-8483-4772-8E79-3D69D8477DE4
         rolse: system-seed
       - name: ubuntu-save
-        size: 10485769
+        size: 16M
         type: 83,0FC63DAF-8483-4772-8E79-3D69D8477DE4
         #role: system-save
       - name: ubuntu-boot
         filesystem: ext4
-        size: 10485760
+        size: 200M
         type: 83,0FC63DAF-8483-4772-8E79-3D69D8477DE4
         role: system-boot
         
