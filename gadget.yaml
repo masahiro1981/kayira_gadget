@@ -46,7 +46,31 @@ volumes:
         type: 77036CD4-03D5-42BB-8ED1-37E5A88BAA34
       - name: fsg
         size: 2097152
-        type: 638FF8E2-22C9-E33B-8F5D-0E81686A68CB    
+        type: 638FF8E2-22C9-E33B-8F5D-0E81686A68CB 
+      - name: snaprecoverysel
+        size: 131072
+        role: system-seed-select
+        content:
+            - image: snaprecoverysel.bin
+        type: B214D5E4-D442-45E6-B8C6-01BDCD82D396
+      - name: snaprecoveryselbak
+        size: 131072
+        role: system-seed-select
+        content:
+            - image: snaprecoverysel.bin
+        type: B214D5E4-D442-45E6-B8C6-01BDCD82D396
+      - name: snapbootsel
+        size: 131072
+        role: system-boot-select
+        content:
+            - image: blobs/snapbootsel.bin
+        type: B214D5E4-D442-45E6-B8C6-01BDCD82D396
+      - name: snapbootselbak
+        size: 131072
+        role: system-boot-select
+        content:
+            - image: blobs/snapbootsel.bin
+        type: B214D5E4-D442-45E6-B8C6-01BDCD82D396                   
       - name: boot_ra
         size: 67108864
         type: 20117F86-E985-4357-B9EE-374BC1D8487D

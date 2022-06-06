@@ -17,6 +17,14 @@ architectures:
 
 
 parts:
+  prebuilt:
+    plugin: dump
+    source: prebuilt
+    organize:
+      '*': blobs/
+    stage:
+      - blobs/flashall
+
   edk2:
     # See 'snapcraft plugins'
     plugin: nil
