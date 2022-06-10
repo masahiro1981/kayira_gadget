@@ -73,6 +73,7 @@ if [ "${REPARTITION}" = "true" ]; then
   fastboot flash devcfg_a devcfg.mbn
   fastboot flash qupfw_a qupv3fw.elf
   fastboot flash storsec_a storsec.mbn
+  fastboot flash system_a system.img
 fi
 
 if [ -n "${SEC_ELF}" ]; then
@@ -82,7 +83,7 @@ fi
 
 # Ubuntu partitions
 echo "Cleaning boot critical partitions"
-fastboot erase boot_ra
+fastboot erase boot_a
 fastboot erase ubuntu-boot
 fastboot erase ubuntu-data
 if [ "${FORMAT_HARD}" = "true" ]; then
@@ -90,7 +91,7 @@ if [ "${FORMAT_HARD}" = "true" ]; then
 fi
 
 echo "Flashing Ubuntu images"
-fastboot flash boot_ra boot.img
+fastboot flash boot_a boot.img
 fastboot flash snaprecoverysel snaprecoverysel.bin
 fastboot flash snaprecoveryselbak snaprecoverysel.bin
 fastboot flash snapbootsel snapbootsel.bin
