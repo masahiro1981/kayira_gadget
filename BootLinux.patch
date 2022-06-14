@@ -1,0 +1,12 @@
+diff --git a/QcomModulePkg/Library/BootLib/BootLinux.c b/QcomModulePkg/Library/BootLib/BootLinux.c
+index c8f6be0..4acb88e 100755
+--- a/QcomModulePkg/Library/BootLib/BootLinux.c
++++ b/QcomModulePkg/Library/BootLib/BootLinux.c
+@@ -1655,6 +1655,7 @@ BOOLEAN IsTargetUbuntuCore (VOID)
+   return TRUE;
+ }
+ #else
++BOOLEAN IsTargetUbuntuCore (VOID)
+ {
+   return FALSE;
+ }
