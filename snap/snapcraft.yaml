@@ -28,43 +28,48 @@ parts:
   edk2:
     # See 'snapcraft plugins'
     plugin: nil
-    #source: https://git.codelinaro.org/clo/le/abl/tianocore/edk2
+    #plugin: dump
+    #source: src
     source: https://git.launchpad.net/~ondrak/+git/edk2
     build-packages: [clang, make, g++-aarch64-linux-gnu, python2]
     source-type: git
     source-depth: 1
     source-tag: LE.UM.6.2.4.r1-uc
-    #source-tag: LE.UM.6.2.4.r1-04300-QCS610.0
     override-build: |
       git apply $SNAPCRAFT_PROJECT_DIR/FITSIGNATURE.patch
+     
       if [ ! -e /usr/bin/python ]; then
           ln -s /usr/bin/python2 /usr/bin/python
       fi 
-      export TARTGET_ARCHITECTURE=aarch64
       export BUILDDIR=$SNAPCRAFT_PART_BUILD
       export BOOTLOADER_OUT=${SNAPCRAFT_PART_BUILD}/out
-      export ENABLE_LE_VARIANT=true
       export ENABLE_SYSTEMD_BOOTSLOT=1
       export ENABLE_DM_MOD_FOR_KERNEL5_4=0
-      export VERIFIED_BOOT_LE=1
-      export VERITY_LE=0
       export EDK_TOOLS_PATH=${SNAPCRAFT_PART_BUILD}/BaseTools
-      export EARLY_ETH_ENABLED=0
-      #export OVERRIDE_ABL_LOAD_ADDRESS=$ABL_LOAD_ADDRESS
       export TARGET_SUPPORTS_EARLY_USB_INIT=0
       export NAND_SQUASHFS_SUPPORT=0
       export BOOTLOADER_PLATFORM=msmcobalt
       export CLANG_BIN=/usr/lib/llvm-10/bin/
       export CLANG_PREFIX=/usr/bin/aarch64-linux-gnu-
-      export SIGNED_KERNEL=1
       export USER_BUILD_VARIANT=0
       export DEVICE_STATUS=DEFAULT_UNLOCK=true
       make -j 1 \
+          'CLANG_BIN=/usr/bin/' \
+          'CLANG_PREFIX=/usr/bin/aarch64-linux-gnu-' \
+          'TARGET_ARCHITECTURE=aarch64' \
+          'BUILDDIR=${PWD}' \
+          'BOOTLOADER_OUT=${PWD}/out' \
+          'ENABLE_LE_VARIANT=false' \
           'VERIFIED_BOOT_LE=1' \
-#          'INIT_BIN_LE=\"/sbin/init\"' 
-          -f makefile all
+          'VERITY_LE=0' \
+          'UBUNTU_CORE_BOOT=1' \
+          'EDK_TOOLS_PATH=${PWD}/BaseTools' \
+          'EARLY_ETH_ENABLED=1' \
+          'UBSAN_UEFI_GCC_FLAG_ALIGNMENT=-Wno-misleading-indentation' \
+
+
       mkdir -p ${SNAPCRAFT_PART_INSTALL}/blobs
-      cp ${SNAPCRAFT_PART_BUILD}/Build/DEBUG_CLANG35/FV/abl.elf  ${SNAPCRAFT_PART_INSTALL}/blobs/abl.elf
+      cp ${SNAPCRAFT_PART_BUILD}/../abl.elf  ${SNAPCRAFT_PART_INSTALL}/blobs/abl.unsigned.elf
 
   partitioning-tool:
      plugin: dump
@@ -144,31 +149,18 @@ parts:
   sign-abl:
     plugin: dump
     source: sectools
-#    after:
-#        - abl
-#    override-pull: |
-#      git clone git+ssh://git.launchpad.net/~ondrak/+git/sectools -b master SecTools || true
-#      cp ${SNAPCRAFT_STAGE}/blobs/abl.elf.nonsecure abl.elf
-#    override-build: |
-#      cp ${SNAPCRAFT_STAGE}/blobs/abl.elf 
-#      VERSION="18-1"
-#      if [ -d sectools ]; then
-#          python2 sectools/sectools.py secimage \
-#              -v \
-#              -c config/sdm6150/sm6150_secimage.xml \
-#              -g abl \
-#              -i abl.elf \
-#              -o ${SNAPCRAFT_PART_INSTALL} \
-#              -sa
-         #ln -f ${SNAPCRAFT_PART_INSTALL}/sdm6150/abl/abl.elf ${SNAPCRAFT_PART_INSTALL}/abl.elf.signed
-          #snapcraftctl set-version ${VERSION}
-#     else
-          #ln -f ${SNAPCRAFT_STAGE}/blobs/abl.elf.nonsecure ${SNAPCRAFT_PART_INSTALL}/abl.elf
-          #snapcraftctl set-version ${VERSION}-unsigned
-#          echo "do nothing"
-#      fi
-#      organize:
-#        '*': blobs/
-#        sdm6150/abl/abl.elf: blobs/abl.elf
-#      stage:
-#        - blobs/abl.elf*  
+    after:
+      - edk2
+    override-build: |
+      cp ${SNAPCRAFT_STAGE}/blobs/abl.unsigned.elf ${SNAPCRAFT_PART_BUILD}/abl.elf
+      python2 sectools.py secimage \
+              -v \
+              -c config/sm6150/sm6150_secimage.xml \
+              -g abl \
+              -i abl.elf \
+              -o ${SNAPCRAFT_PART_INSTALL} \
+              -sa
+    organize:
+     sm6150/abl/abl.elf: blobs/abl.elf
+    stage:
+      - blobs/abl.elf*  
