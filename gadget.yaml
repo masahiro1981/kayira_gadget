@@ -79,14 +79,6 @@ volumes:
         size: 200M
         type: 20117F86-E985-4357-B9EE-374BC1D8487D
         role: system-seed-image
-      - name: boot_a
-        size: 200M
-        type: 20117F86-E985-4357-B9EE-374BC1D8487D
-        role: system-boot-image
-      - name: boot_b
-        size: 200M
-        type: 20117F86-E985-4357-B9EE-374BC1D8487D
-        role: system-boot-image   
       - name: keymaster_a
         size: 524288
         type: A11D2A7C-D82A-4C2F-8A01-1805240E6626
