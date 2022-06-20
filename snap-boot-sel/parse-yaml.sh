@@ -40,7 +40,7 @@ get_part_names() {
 
   parse_yaml $1 | grep "${role}" | awk -F '_' '{print $4}' | while read line
   do
-    name=$"gadget_volumes_dragonboard_structure_${line}"
+    name=$"gadget_volumes_qcs410_structure_${line}"
     echo -e "${formating}${x}-part $(echo ${!name} | awk '{print $2}')"
     x=$((x+1))
   done
