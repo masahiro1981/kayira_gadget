@@ -198,12 +198,6 @@ volumes:
       - name: ssd
         size: 8192
         type: 2C86E742-745E-4FDD-BFD8-B6A7AC638772
-      - name: dtbo_a
-        size: 9125888
-        type: 6cb747f1-c2ef-4092-add0-ca39f79c7af4
-      - name: dtbo_b
-        size: 9125888
-        type: 77036CD4-03D5-42BB-8ED1-37E5A88BAA34
       - name: modemst1
         size: 2097152
         type: EBBEADAF-22C9-E33B-8F5D-0E81686A68CB

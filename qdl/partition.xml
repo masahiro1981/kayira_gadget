@@ -66,8 +66,6 @@
 	<partition label="footer" size_in_kb="footer-size" type="EBD0A0A2-B9E5-4433-87C0-68B6B72699C7" bootable="false" readonly="false" filename=""/>
 	<partition label="fsc" size_in_kb="fsc-size" type="57B90A16-22C9-E33B-8F5D-0E81686A68CB" bootable="false" readonly="false" filename=""/>
         <partition label="ssd" size_in_kb="ssd-size" type="2C86E742-745E-4FDD-BFD8-B6A7AC638772" bootable="false" readonly="false" filename=""/>
-        <partition label="dtbo_a" size_in_kb="dtbo_a-size" type="24d0d418-d31d-4d8d-ac2c-4d4305188450" bootable="false" readonly="false" filename="dtbo.img"/>
-        <partition label="dtbo_b" size_in_kb="dtbo_b-size" type="77036CD4-03D5-42BB-8ED1-37E5A88BAA34" bootable="false" readonly="false" filename="dtbo.img"/>
 	<partition label="modemst1" size_in_kb="modemst1-size" type="EBBEADAF-22C9-E33B-8F5D-0E81686A68CB" bootable="false" readonly="false" filename=""/>
         <partition label="modemst2" size_in_kb="modemst2-size" type="0A288B1F-22C9-E33B-8F5D-0E81686A68CB" bootable="false" readonly="false" filename=""/>
         <partition label="persist" size_in_kb="persist-size" type="6C95E238-E343-4BA8-B489-8681ED22AD0B" bootable="false" readonly="false" filename="persist.img" sparse="true"/>
