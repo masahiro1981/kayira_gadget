@@ -27,14 +27,15 @@ parts:
 
   edk2:
     # See 'snapcraft plugins'
-    plugin: nil
-    #plugin: dump
-    #source: src
-    source: https://git.launchpad.net/~ondrak/+git/edk2
+    #plugin: nil
+    plugin: dump
+    source: src
+    #plugin: nil
+    #source: https://git.launchpad.net/~ondrak/+git/edk2
     build-packages: [clang, make, g++-aarch64-linux-gnu, python2]
-    source-type: git
-    source-depth: 1
-    source-tag: LE.UM.6.2.4.r1-uc
+    #source-type: git
+    #source-depth: 1
+    #source-tag: LE.UM.6.2.4.r1-uc
     override-build: |
       git apply $SNAPCRAFT_PROJECT_DIR/FITSIGNATURE.patch
      
@@ -69,7 +70,7 @@ parts:
 
 
       mkdir -p ${SNAPCRAFT_PART_INSTALL}/blobs
-      cp ${SNAPCRAFT_PART_BUILD}/../abl.elf  ${SNAPCRAFT_PART_INSTALL}/blobs/abl.unsigned.elf
+      cp ${SNAPCRAFT_PART_BUILD}/../abl.elf  ${SNAPCRAFT_PART_INSTALL}/blobs/abl.elf.unsigned
 
   partitioning-tool:
      plugin: dump
@@ -152,7 +153,7 @@ parts:
     after:
       - edk2
     override-build: |
-      cp ${SNAPCRAFT_STAGE}/blobs/abl.unsigned.elf ${SNAPCRAFT_PART_BUILD}/abl.elf
+      cp ${SNAPCRAFT_STAGE}/blobs/abl.elf.unsigned ${SNAPCRAFT_PART_BUILD}/abl.elf
       python2 sectools.py secimage \
               -v \
               -c config/sm6150/sm6150_secimage.xml \
